@@ -1,0 +1,496 @@
+@charset "utf-8";
+@import url('normalize.css');
+@import url('ionicons.min.css');
+/* Layout
+ ========================================================================== */
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	font: 100%/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 640px) {
+	html {
+		font-size: 112%;
+	}
+}
+
+@media (min-width: 64rem) {
+	html {
+		font-size: 120%;
+	}
+}
+
+body {
+	background-color: #fff;
+	color: #000;
+	margin: 0;
+}
+
+.container {
+	margin: 0 auto;
+	/*max-width: 53rem;*/
+	width: 92.26%;
+}
+.container-full {
+	margin: 0 auto;
+	width: 100%;
+}
+
+/* Header
+ ========================================================================== */
+
+header {
+	background-color: #497bad;
+	text-align: center;
+}
+
+header h1 {
+	border: 3px solid #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+	padding: .4rem .6rem;
+	display: inline-block;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	margin-bottom: 2rem;
+}
+
+header p {
+	color: rgba(255,255,255,0.7);
+	margin: 0 auto;
+}
+
+header a {
+	color: rgba(255,255,255,0.9);
+	text-decoration: underline;
+}
+
+header a:hover {
+	text-decoration: none;
+}
+
+/* Section
+ ========================================================================== */
+
+section {
+	border-top: 1px solid #eee;
+	text-align: center;
+	padding: 2rem 0;
+}
+
+section:first-of-type {
+	border-top: none;
+}
+
+@media (min-width: 640px) {
+	section {
+		padding: 4rem 0;
+	}
+}
+
+/* Mobile First Grid
+ ========================================================================== */
+/**
+ * 	Looking for offset ? (Just put margin-left:(WHAT YOU USE .col) % : margin-left:75% equals .col-75-offset)
+ *  Pull ? Push ?remove this css and download bootstrap.
+ */
+.row {
+	/* Go fuck with bootstrap */
+}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99999;
+}
+.nav .nav-bar {
+	background-color: #000;
+	height: 3rem;
+	width: 100%;
+	position: relative;
+}
+.nav .nav-bar .nav-button {
+	color: #fff;
+	position: absolute;
+	width: 2.5rem;
+	right: 0;
+}
+.nav .nav-bar .nav-button > * {
+	font-size: 2.5rem;
+	bottom: -3.4rem;
+	position: absolute;
+}
+.nav .nav-items {
+	background-color: #EEEEEE;
+	display: none;
+}
+@media (min-width: 640px) {
+	.nav {
+		display: none;
+	}
+}
+/* Slider */
+
+#ws-slider {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+#ws-slider ul {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	list-style: none;
+}
+
+#ws-slider ul li {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #ccc;
+	text-align: center;
+	background-size: cover;
+	background-position: center center;
+}
+#ws-slider .ws-circle {
+	position: absolute;
+	z-index: 999;
+	bottom: 5%;
+	right: 0;
+	left: 50%;
+	width: auto;
+	cursor: pointer;
+	text-align: center;
+}
+#ws-slider .ws-circle .ws-circ {
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	display: table;
+	margin-right: 0.1rem;
+	background: #2a2a2a;
+	float: left;
+}
+#ws-slider .ws-circle .ws-circ:hover {
+	opacity: 0.8;
+	-webkit-transition: all 0.2s ease;
+}
+#ws-slider .ws-circle .ws-circ.active {
+	background:#CCCCCC;
+}
+a.control_prev, a.control_next {
+	position: absolute;
+	top: 40%;
+	z-index: 999;
+	display: block;
+	padding: 4% 3%;
+	width: auto;
+	height: auto;
+	background: #2a2a2a;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 18px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+	opacity: 1;
+	-webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+	border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+	right: 0;
+	border-radius: 2px 0 0 2px;
+}
+
+.col-100, .col-91, .col-90, .col-88,.col-80, .col-75, .col-70, .col-66, .col-60, .col-58, .col-50, .col-41, .col-40, .col-37, .col-33, .col-25, .col-20, .col-16, .col-12, .col-10, .col-8 {
+	margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+	.col-100, .col-91, .col-90, .col-88,.col-80, .col-75, .col-70, .col-66, .col-60, .col-58, .col-50, .col-41, .col-40, .col-37, .col-33, .col-25, .col-20, .col-16, .col-12, .col-10, .col-8 {
+		float: left;
+		margin: 0;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.col-100 {
+		width: 100%;
+	}
+	.col-91 {
+		width: 91.66666667%;
+	}
+	.col-90 {
+		width: 90%;
+	}
+	.col-84{
+		width: 83.33333333%;
+	}
+	.col-80 {
+		width: 80%;
+	}
+	.col-75 {
+		width: 75%;
+	}
+	.col-70 {
+		width: 70%;
+	}
+	.col-66 {
+		width: 66.66666667%;
+	}
+	.col-60 {
+		width: 60%;
+	}
+	.col-58 {
+		width: 58.33333333%;
+	}
+	.col-50 {
+		width: 50%;
+	}
+	.col-41 {
+		width: 41.66666667%;
+	}
+	.col-40 {
+		width: 40%;
+	}
+	.col-37 {
+		width: 37.5%;
+	}
+	.col-33 {
+		width: 33.33333333%;
+	}
+	.col-30 {
+		width: 30%;
+	}
+	.col-25 {
+		width: 25%;
+	}
+	.col-20 {
+		width: 20%;
+	}
+	.col-16 {
+		width: 16.66666667%;
+	}
+	.col-12 {
+		width:12.5%;
+	}
+	.col-10 {
+		width: 10%;
+	}
+	.col-8 {
+		width: 8.33333333%;
+	}
+
+}
+
+/* Typography
+ ========================================================================== */
+
+h1, h2, h3, h4, h5 {
+	font-weight: 600;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.3rem;
+	line-height: 1.3em;
+	margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+}
+
+h3 {
+	font-size: 1.2rem;
+	margin-bottom: .5rem;
+}
+
+p {
+	color: #999;
+	margin: 0 auto;
+	max-width: 30rem;
+}
+
+blockquote {
+	margin: 0;
+}
+
+blockquote p {
+	color: #bbb;
+	font-style: italic;
+	margin-bottom: 1.5rem;
+}
+
+cite {
+	color: #bbb;
+}
+
+/* Lists
+ ========================================================================== */
+
+ul {
+	margin: 0;
+	text-align: left;
+}
+
+@media (min-width: 640px) {
+	ul {
+		display: inline-block;
+	}
+}
+
+/* Links
+ ========================================================================== */
+
+a {
+	color: #497bad;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Buttons
+ ========================================================================== */
+
+.button {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #497bad;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 0.7rem 1.5rem;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.button:hover {
+	background: #5183b6;
+	text-decoration: none;
+}
+
+@media (min-width: 640px) {
+	.button {
+		display: inline-block;
+		font-size: 0.9rem;
+	}
+}
+
+/* Elements
+ ========================================================================== */
+
+hr {
+	border: 0;
+	border-top: 1px solid #ddd;
+	margin: 2rem auto;
+	width: 3rem;
+}
+
+@media (min-width: 640px) {
+	hr {
+		margin: 2.5rem auto;
+	}
+}
+
+hr.small {
+	margin: 1.5rem auto;
+}
+
+.circle {
+	border: 3px solid #555;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	color: #555;
+	display: block;
+	font-size: 1.7rem;
+	font-weight: 600;
+	height: 3.2rem;
+	line-height: 1.7em;
+	margin: 0 auto 1rem auto;
+	text-align: center;
+	width: 3.2rem;
+}
+
+img {
+	display: block;
+	height: auto;
+	margin: 0 auto 1.5rem auto;
+	width: 100%;
+}
+
+.rwd {
+	margin: 0 auto 1.5rem auto;
+	max-width: 440px;
+}
+
+/* Clearfix by Nicolas Gallagher
+ ========================================================================== */
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+/**
+ *  Clear padding margin
+ * **/
+.cl {
+	padding: 0;
+	margin: 0;
+}
+.disable {
+	display: none;
+}
+@media (min-width: 640px) {
+	.disable {
+		display: block;
+		
+	}
+}
