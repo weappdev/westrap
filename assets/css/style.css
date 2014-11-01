@@ -1,0 +1,39 @@
+body{background-image:url(../images/bck.jpg)}
+
+.container{margin:0 auto;width:960px;}
+.top{background: #4499ee url('../images/header-bck.png') 0 0 repeat;}
+.top .title{padding: 44px 0;text-align: center;color: #fff;font-size: 37px;}
+
+.menu{
+    background-color: #fff;
+    border-bottom: 2px solid #D0D0D0;
+}
+.menu .item{
+    text-align: center;
+    padding: 9px 0;
+    text-decoration: none;
+}
+.middle{background-color:#fff;}
+.middle p{margin:10px 20px;}
+.middle p.fc{margin:10px 0}
+.features{
+    padding-bottom: 20px;
+}
+.features .slogan{
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+.features .feature{}
+.features .feature .img{width:100%;}
+.features .feature .title{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.footer a{
+    text-align: center;
+    background-color: #fff;
+    font-size: 1.6rem;
+    padding: 20px 0;
+}

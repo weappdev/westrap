@@ -5,7 +5,7 @@
 html{font:100%/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:400;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
 @media(min-width:64rem){html{font-size:120%}
 }
-body{background-color:#fff;color:#000;margin:0}
+body{background-color:#fff;color:#000;margin:0;}
 .container{margin:0 auto;width:92.26%}
 .container-full{margin:0 auto;width:100%}
 header{background-color:#497bad;text-align:center}
@@ -35,7 +35,7 @@ a.control_next{right:0;border-radius:2px 0 0 2px}
 h1,h2,h3,h4,h5{font-weight:600;margin:0}
 h1{font-size:1.3rem;line-height:1.3em;margin-bottom:1.5rem}
 h3{font-size:1.2rem;margin-bottom:.5rem}
-p{color:#999;margin:0 auto;max-width:30rem}
+p{color:#999;margin:0 auto;}
 blockquote{margin:0}
 blockquote p{color:#bbb;font-style:italic;margin-bottom:1.5rem}
 cite{color:#bbb}
